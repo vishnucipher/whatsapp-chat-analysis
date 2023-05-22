@@ -1,0 +1,8 @@
+emoji>=1.7.0
+matplotlib>=3.7.1
+numpy>=1.23.5
+pandas>=1.5.3
+seaborn>=0.12.2
+streamlit>=1.21.0
+urlextract>=1.8.0
+
