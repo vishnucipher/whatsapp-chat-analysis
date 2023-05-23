@@ -18,6 +18,9 @@ visibility:hidden;
 }""",unsafe_allow_html=True)
 
 
+
+
+
 def preprocessing(data):
     pattern='\d{1,2}/\d{1,2}/\d{2,4},\s\d{1,2}:\d{1,2}\s-\s'
 
@@ -75,8 +78,11 @@ def preprocessing(data):
     dataset['period']=period
     return dataset
 
-st.markdown('# WHATSAPP CHAT ANALYSIS')
-
+col1,col2=st.columns([2,1],gap='small')
+with col1:
+    st.markdown('# WHATSAPP CHAT ANALYSIS')
+with col2:
+    st.image('chat-pic.png',width=200)
 st.error('This website is only applicable for 24hours format whatsapp chat', icon="🚨")
 file=st.file_uploader('Please Upload TXT File',type=['txt'])
 
@@ -150,7 +156,6 @@ if file is not None:
             pt.grid(axis='both')
             pt.xticks(rotation=90)
             st.write(fig)
-            #st.bar_chart(month.reset_index())
         
             
             
@@ -237,7 +242,6 @@ if file is not None:
             pt.ylabel('count of words')
             pt.xticks(rotation=90)
             st.write(fig)
-            #st.bar_chart(most_common_words)
         
         st.markdown('---')
         #emoji analysis
@@ -256,5 +260,4 @@ if file is not None:
             pt.legend(title='Emojis')
             st.write(fig)
         st.markdown('---')
-
 
