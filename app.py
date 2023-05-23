@@ -81,6 +81,7 @@ def preprocessing(data):
 col1,col2=st.columns([2,1],gap='small')
 with col1:
     st.markdown('# WHATSAPP CHAT ANALYSIS')
+    st.text('This is whatsapp chat analysis')
 with col2:
     st.image('chat-pic.png',width=200)
 st.error('This website is only applicable for 24hours format whatsapp chat', icon="🚨")
